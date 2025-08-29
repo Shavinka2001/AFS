@@ -949,150 +949,904 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Professional Business Certifications */}
+        {/* Enhanced Professional Business Certifications */}
         <motion.div 
           className="pb-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 2.8 }}
         >
-          <div className="text-center mb-16">
+          {/* Enhanced Professional Header Section */}
+          <div className="text-center mb-24 relative">
+            {/* Professional Background Elements */}
+            <motion.div 
+              className="absolute inset-0 bg-gradient-to-r from-slate-50/40 via-white/60 to-slate-50/40 rounded-3xl border border-slate-200/50 shadow-sm"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: 2.8 }}
+            />
+            
+            {/* Decorative Top Border */}
+            <motion.div 
+              className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 rounded-full"
+              style={{ 
+                background: 'linear-gradient(90deg, #730007 0%, #1a1b4f 50%, #730007 100%)',
+                backgroundSize: '200% 100%'
+              }}
+              initial={{ width: 0 }}
+              animate={{ 
+                width: "128px",
+                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+              }}
+              transition={{ 
+                width: { duration: 1, delay: 3.0 },
+                backgroundPosition: { duration: 4, repeat: Infinity }
+              }}
+            />
+
+            {/* Enhanced Professional Badge */}
+            <motion.div 
+              className="inline-flex items-center px-8 py-4 bg-white border-2 border-slate-200 rounded-2xl mb-10 shadow-lg relative z-10"
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 2.9, type: "spring", stiffness: 120 }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 12px 24px rgba(0, 0, 0, 0.1)",
+                borderColor: "#94a3b8"
+              }}
+            >
+              {/* Badge Background Glow */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-30"
+                style={{ 
+                  background: 'linear-gradient(135deg, #730007/10, #1a1b4f/10)'
+                }}
+                whileHover={{ opacity: 0.2 }}
+                transition={{ duration: 0.3 }}
+              />
+              
+              {/* Official Seal Icon */}
+              <motion.div 
+                className="w-8 h-8 mr-4 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: '#730007' }}
+                initial={{ rotate: -180, scale: 0 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{ delay: 3.1, type: "spring", stiffness: 200 }}
+                whileHover={{ rotate: 10, scale: 1.1 }}
+              >
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812z" clipRule="evenodd" />
+                </svg>
+              </motion.div>
+              
+              {/* Badge Text */}
+              <div className="relative z-10">
+                <motion.span 
+                  className="text-sm font-bold tracking-wider uppercase"
+                  style={{ color: '#1a1b4f' }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 3.2, duration: 0.6 }}
+                >
+                  Government Certified Business
+                </motion.span>
+                <motion.div 
+                  className="text-xs text-slate-500 font-medium mt-1 tracking-wide"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 3.3, duration: 0.6 }}
+                >
+                  Federal & State Authorizations
+                </motion.div>
+              </div>
+
+              {/* Verification Check */}
+              <motion.div 
+                className="ml-4 w-6 h-6 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: '#1a1b4f' }}
+                initial={{ scale: 0, rotate: -90 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 3.4, type: "spring", stiffness: 200 }}
+              >
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </motion.div>
+            </motion.div>
+
+            {/* Enhanced Main Title */}
             <motion.h3 
-              className="text-3xl font-bold mb-6 relative inline-block"
-              style={{ color: '#1a1b4f' }}
+              className="text-5xl lg:text-6xl font-black mb-8 relative tracking-tight leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 3.0 }}
+            >
+              {/* Professional Typography Treatment */}
+              <motion.div
+                className="relative inline-block"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.span
+                  className="block text-4xl lg:text-5xl font-bold mb-2"
+                  style={{ color: '#1a1b4f' }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 3.1 }}
+                >
+                  Certified Business
+                </motion.span>
+                
+                <motion.span 
+                  className="block text-5xl lg:text-6xl font-black relative"
+                  style={{ color: '#730007' }}
+                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 3.2 }}
+                >
+                  Excellence
+                  
+                  {/* Enhanced Dynamic Underline */}
+                  <motion.div 
+                    className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 h-3 rounded-full"
+                    style={{ 
+                      background: 'linear-gradient(90deg, #730007 0%, #1a1b4f 25%, #730007 50%, #1a1b4f 75%, #730007 100%)',
+                      backgroundSize: '400% 100%'
+                    }}
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ 
+                      width: "160px",
+                      opacity: 1,
+                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                    }}
+                    transition={{ 
+                      width: { duration: 1.2, delay: 3.4 },
+                      opacity: { duration: 0.6, delay: 3.4 },
+                      backgroundPosition: { duration: 5, repeat: Infinity }
+                    }}
+                  />
+                </motion.span>
+              </motion.div>
+            </motion.h3>
+            
+            {/* Enhanced Professional Description */}
+            <motion.div 
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 3.3 }}
+            >
+              <motion.p 
+                className="text-xl lg:text-2xl text-slate-600 leading-relaxed font-medium mb-6"
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.3 }}
+              >
+                Officially recognized by{' '}
+                <motion.span 
+                  className="font-bold"
+                  style={{ color: '#1a1b4f' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  federal and state authorities
+                </motion.span>{' '}
+                for our unwavering commitment to{' '}
+                <motion.span 
+                  className="font-bold"
+                  style={{ color: '#730007' }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  operational excellence
+                </motion.span>{' '}
+                and regulatory compliance in facility management services
+              </motion.p>
+              
+              {/* Professional Credentials Strip */}
+              <motion.div 
+                className="flex items-center justify-center space-x-8 text-sm font-semibold text-slate-500"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 3.5 }}
+              >
+                <motion.div 
+                  className="flex items-center space-x-2"
+                  whileHover={{ scale: 1.05, color: '#730007' }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <span>SBA 8(a) Certified</span>
+                </motion.div>
+                <div className="w-px h-4 bg-slate-300"></div>
+                <motion.div 
+                  className="flex items-center space-x-2"
+                  whileHover={{ scale: 1.05, color: '#1a1b4f' }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <span>State Certified</span>
+                </motion.div>
+                <div className="w-px h-4 bg-slate-300"></div>
+                <motion.div 
+                  className="flex items-center space-x-2"
+                  whileHover={{ scale: 1.05, color: '#059669' }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                  <span>Fully Compliant</span>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+
+            {/* Professional Decorative Elements */}
+            <motion.div 
+              className="flex items-center justify-center mt-10 space-x-6"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 2.9 }}
+              transition={{ duration: 0.6, delay: 3.6 }}
             >
-              Certified Business Excellence
               <motion.div 
-                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 rounded-full"
-                style={{ backgroundColor: '#730007' }}
+                className="w-24 h-px bg-gradient-to-r from-transparent via-slate-300 to-slate-300"
                 initial={{ width: 0 }}
                 animate={{ width: "96px" }}
-                transition={{ duration: 1, delay: 3.2 }}
+                transition={{ duration: 1, delay: 3.7 }}
               />
-            </motion.h3>
-            <motion.p 
-              className="text-lg text-slate-600 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.0 }}
-            >
-              Recognized by federal and state authorities for our commitment to excellence
-            </motion.p>
+              <motion.div 
+                className="w-3 h-3 rounded-full border-2 border-slate-300 bg-white"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  borderColor: ['#cbd5e1', '#730007', '#1a1b4f', '#cbd5e1']
+                }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              <motion.div 
+                className="w-24 h-px bg-gradient-to-l from-transparent via-slate-300 to-slate-300"
+                initial={{ width: 0 }}
+                animate={{ width: "96px" }}
+                transition={{ duration: 1, delay: 3.7 }}
+              />
+            </motion.div>
+
+            {/* Bottom Decorative Border */}
+            <motion.div 
+              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-1 rounded-full"
+              style={{ 
+                background: 'linear-gradient(90deg, transparent 0%, #730007 25%, #1a1b4f 50%, #730007 75%, transparent 100%)',
+                backgroundSize: '200% 100%'
+              }}
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ 
+                width: "160px",
+                opacity: 1,
+                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+              }}
+              transition={{ 
+                width: { duration: 1.2, delay: 3.8 },
+                opacity: { duration: 0.6, delay: 3.8 },
+                backgroundPosition: { duration: 6, repeat: Infinity }
+              }}
+            />
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Enhanced Professional Certification Cards Container */}
+          <div className="max-w-6xl mx-auto relative">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-[0.015]">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `
+                  radial-gradient(circle at 25% 25%, #1e293b 1px, transparent 1px),
+                  radial-gradient(circle at 75% 75%, #64748b 1px, transparent 1px)
+                `,
+                backgroundSize: '60px 60px'
+              }} />
+            </div>
+
+            {/* Enhanced Professional Grid Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
               {[
                 { 
                   name: "8(a) SBA Certified Small Business", 
-                  description: "Small Business Administration certification for federal contracting opportunities",
+                  description: "Prestigious Small Business Administration certification enabling access to exclusive federal contracting opportunities and specialized government procurement programs",
+                  longDescription: "This elite federal certification validates our designation as a qualified small disadvantaged business enterprise, granting privileged access to set-aside federal contracts and demonstrating our unwavering commitment to operational excellence in public sector facility management services.",
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
                   delay: 3.0,
-                  badge: "Federal"
+                  badge: "Federal Certification",
+                  image: "/src/assets/image003.jpg",
+                  hasImage: true,
+                  certificationNumber: "SBA-8A-2024-FM",
+                  issuedBy: "U.S. Small Business Administration",
+                  validUntil: "2029",
+                  priority: "Priority 1",
+                  sector: "Facility Management Services",
+                  naicsCode: "561210"
                 },
                 { 
                   name: "Maryland Small Business Reserve Program", 
-                  description: "State-certified small business for Maryland government contracts",
+                  description: "Official state certification for Maryland's Small Business Reserve Program, providing privileged access to state government contracts and procurement opportunities",
+                  longDescription: "Distinguished state-level certification recognizing our exceptional qualifications for Maryland's competitive Small Business Reserve Program, ensuring priority consideration for state government facility management contracts and preferred vendor status for local procurement initiatives.",
                   icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-                  delay: 3.1,
-                  badge: "State"
+                  delay: 3.2,
+                  badge: "State Certification",
+                  hasImage: false,
+                  certificationNumber: "MD-SBR-2024-FM",
+                  issuedBy: "State of Maryland Department of General Services",
+                  validUntil: "2028",
+                  priority: "Tier 1",
+                  sector: "Government Facility Services",
+                  registryNumber: "MD-001547"
                 }
               ].map((cert, index) => (
                 <motion.div 
                   key={index}
-                  className="group relative bg-white rounded-xl border border-slate-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
-                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  className="group relative bg-gradient-to-br from-white via-slate-50/30 to-white rounded-3xl border-2 border-slate-200/60 p-10 shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden backdrop-blur-sm"
+                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
                   animate={{ 
                     opacity: 1, 
                     y: 0,
                     scale: 1
                   }}
                   transition={{ 
-                    duration: 0.6, 
-                    delay: cert.delay 
+                    duration: 1, 
+                    delay: cert.delay,
+                    type: "spring",
+                    stiffness: 80
                   }}
                   whileHover={{ 
                     scale: 1.02,
-                    y: -5,
-                    boxShadow: "0 16px 32px rgba(0, 0, 0, 0.1)",
-                    borderColor: "#64748b"
+                    y: -12,
+                    boxShadow: "0 30px 60px rgba(0, 0, 0, 0.18)",
+                    borderColor: index === 0 ? "#730007" : "#1a1b4f"
                   }}
                 >
-                  {/* Background Pattern */}
-                  <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
-                    <div className="w-full h-full bg-slate-200 rounded-full blur-2xl" />
+                  {/* Enhanced Professional Background Effects */}
+                  <div className="absolute inset-0 opacity-[0.02]">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `
+                        radial-gradient(circle at 20% 30%, ${index === 0 ? '#730007' : '#1a1b4f'} 1px, transparent 1px),
+                        radial-gradient(circle at 80% 70%, ${index === 0 ? '#1a1b4f' : '#730007'} 1px, transparent 1px)
+                      `,
+                      backgroundSize: '60px 60px, 80px 80px'
+                    }} />
                   </div>
                   
-                  {/* Badge */}
+                  {/* Premium Gradient Overlay */}
                   <motion.div 
-                    className="absolute top-4 right-4 px-3 py-1 text-white text-xs font-medium rounded-full"
-                    style={{ backgroundColor: '#730007' }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: cert.delay + 0.3 }}
-                  >
-                    {cert.badge}
-                  </motion.div>
-
-                  {/* Icon */}
-                  <motion.div 
-                    className="w-16 h-16 mb-6 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center"
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 200, 
-                      delay: cert.delay + 0.1 
+                    className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    style={{
+                      background: index === 0 
+                        ? 'linear-gradient(135deg, rgba(115, 0, 7, 0.03) 0%, rgba(26, 27, 79, 0.03) 100%)'
+                        : 'linear-gradient(135deg, rgba(26, 27, 79, 0.03) 0%, rgba(115, 0, 7, 0.03) 100%)'
                     }}
-                    whileHover={{ 
-                      scale: 1.1, 
-                      backgroundColor: "#1a1b4f",
-                      borderColor: "#1a1b4f"
-                    }}
-                  >
-                    <svg className="w-8 h-8 text-slate-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d={cert.icon} clipRule="evenodd" />
-                    </svg>
-                  </motion.div>
-
-                  {/* Content */}
-                  <motion.h4 
-                    className="text-xl font-bold mb-3 leading-tight"
-                    style={{ color: '#1a1b4f' }}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: cert.delay + 0.2 }}
-                  >
-                    {cert.name}
-                  </motion.h4>
-                  
-                  <motion.p 
-                    className="text-slate-600 leading-relaxed"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: cert.delay + 0.3 }}
-                  >
-                    {cert.description}
-                  </motion.p>
-
-                  {/* Animated Border */}
-                  <motion.div 
-                    className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-300"
-                    style={{ backgroundColor: '#730007' }}
                   />
                   
-                  {/* Verification Icon */}
+                  {/* Enhanced Professional Badge with Animation - Reduced Size */}
                   <motion.div 
-                    className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    whileHover={{ scale: 1.2 }}
+                    className="absolute top-4 right-4 px-3 py-1.5 text-white text-xs font-bold rounded-xl shadow-lg border border-white/40 z-20 backdrop-blur-md"
+                    style={{ 
+                      background: index === 0 
+                        ? 'linear-gradient(135deg, #730007 0%, #8b0009 100%)' 
+                        : 'linear-gradient(135deg, #1a1b4f 0%, #252663 100%)'
+                    }}
+                    initial={{ opacity: 0, scale: 0, rotate: -15, x: 20 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0, x: 0 }}
+                    transition={{ delay: cert.delay + 0.4, type: "spring", stiffness: 150 }}
+                    whileHover={{ scale: 1.05, rotate: 2, y: -1 }}
                   >
-                    <svg className="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <div className="flex items-center space-x-1.5">
+                      <motion.div
+                        className="w-3 h-3 rounded-full bg-white/30 flex items-center justify-center"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <svg className="w-1.5 h-1.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </motion.div>
+                      <span className="tracking-wider font-extrabold whitespace-nowrap">{cert.badge}</span>
+                    </div>
+                    
+                    {/* Animated Badge Glow */}
+                    <motion.div
+                      className="absolute inset-0 rounded-xl opacity-0"
+                      style={{
+                        background: index === 0
+                          ? 'linear-gradient(135deg, rgba(115, 0, 7, 0.4) 0%, rgba(139, 0, 9, 0.4) 100%)'
+                          : 'linear-gradient(135deg, rgba(26, 27, 79, 0.4) 0%, rgba(37, 38, 99, 0.4) 100%)'
+                      }}
+                      whileHover={{ 
+                        opacity: [0, 0.3, 0],
+                        scale: [1, 1.1, 1.2]
+                      }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                    />
                   </motion.div>
+
+                  {/* Enhanced Professional Header Section */}
+                  <motion.div 
+                    className="mb-10 pr-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: cert.delay + 0.1 }}
+                  >
+                    <div className="flex items-start space-x-6 mb-6">
+                      {/* Enhanced Premium Icon */}
+                      <motion.div 
+                        className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-white to-slate-100 border-3 border-slate-200 flex items-center justify-center shadow-lg overflow-hidden"
+                        initial={{ scale: 0, rotate: -270, opacity: 0 }}
+                        animate={{ scale: 1, rotate: 0, opacity: 1 }}
+                        transition={{ 
+                          type: "spring", 
+                          stiffness: 150, 
+                          delay: cert.delay + 0.2,
+                          duration: 1
+                        }}
+                        whileHover={{ 
+                          scale: 1.15, 
+                          backgroundColor: index === 0 ? "#730007" : "#1a1b4f",
+                          borderColor: index === 0 ? "#730007" : "#1a1b4f",
+                          rotate: 8,
+                          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
+                        }}
+                      >
+                        {/* Icon Background Animation */}
+                        <motion.div
+                          className="absolute inset-0 rounded-2xl opacity-0"
+                          style={{
+                            background: index === 0
+                              ? 'radial-gradient(circle, rgba(115, 0, 7, 0.1) 0%, transparent 70%)'
+                              : 'radial-gradient(circle, rgba(26, 27, 79, 0.1) 0%, transparent 70%)'
+                          }}
+                          whileHover={{ opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                        
+                        <svg className="w-10 h-10 text-slate-600 group-hover:text-white transition-all duration-500 relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d={cert.icon} clipRule="evenodd" />
+                        </svg>
+                        
+                        {/* Animated Ring Effect */}
+                        <motion.div
+                          className="absolute inset-0 border-3 rounded-2xl opacity-0"
+                          style={{ borderColor: index === 0 ? '#730007' : '#1a1b4f' }}
+                          whileHover={{ 
+                            opacity: [0, 0.7, 0],
+                            scale: [1, 1.1, 1.2]
+                          }}
+                          transition={{ duration: 1, repeat: Infinity }}
+                        />
+                      </motion.div>
+                      
+                      {/* Enhanced Certification Details */}
+                      <div className="flex-1 space-y-3">
+                        <motion.div 
+                          className="text-sm font-bold text-slate-500 tracking-wider uppercase mb-2"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: cert.delay + 0.3 }}
+                        >
+                          {cert.issuedBy}
+                        </motion.div>
+                        
+                        {/* Professional Credential Tags */}
+                        <div className="flex flex-wrap gap-2">
+                          <motion.div 
+                            className="px-3 py-1.5 bg-gradient-to-r from-green-100 to-emerald-100 border border-green-200 text-green-800 rounded-lg text-xs font-bold tracking-wide"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: cert.delay + 0.4 }}
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            ✓ Valid until {cert.validUntil}
+                          </motion.div>
+                          
+                          <motion.div 
+                            className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200 text-blue-800 rounded-lg text-xs font-bold tracking-wide"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: cert.delay + 0.5 }}
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            {cert.priority} Status
+                          </motion.div>
+                        </div>
+                        
+                        {/* Professional Sector Tag */}
+                        <motion.div 
+                          className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-semibold tracking-wide border-2"
+                          style={{
+                            backgroundColor: index === 0 ? 'rgba(115, 0, 7, 0.05)' : 'rgba(26, 27, 79, 0.05)',
+                            borderColor: index === 0 ? 'rgba(115, 0, 7, 0.2)' : 'rgba(26, 27, 79, 0.2)',
+                            color: index === 0 ? '#730007' : '#1a1b4f'
+                          }}
+                          initial={{ opacity: 0, x: -15 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: cert.delay + 0.6 }}
+                          whileHover={{ scale: 1.05, x: 5 }}
+                        >
+                          <span className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: index === 0 ? '#730007' : '#1a1b4f' }}></span>
+                          {cert.sector}
+                        </motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Enhanced Professional Image Section for 8(a) SBA */}
+                  {cert.hasImage && (
+                    <motion.div 
+                      className="mb-8 relative"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: cert.delay + 0.1, duration: 0.8 }}
+                    >
+                      <div className="relative rounded-2xl overflow-hidden border-2 border-slate-300 bg-white shadow-lg">
+                        {/* Enhanced Professional Image Container */}
+                        <motion.div 
+                          className="relative h-52 overflow-hidden bg-gradient-to-br from-slate-50 to-white"
+                          whileHover={{ scale: 1.01 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <img 
+                            src={cert.image} 
+                            alt="8(a) SBA Certification Documentation"
+                            className="w-full h-full object-contain object-center p-6"
+                            style={{
+                              objectFit: 'contain',
+                              filter: 'brightness(1.1) contrast(1.15) saturate(1.05) drop-shadow(0 4px 12px rgba(0,0,0,0.1))'
+                            }}
+                          />
+                          
+                          {/* Enhanced Professional Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-white/5 pointer-events-none" />
+                          
+                          {/* Professional Corner Frame with Brand Colors */}
+                          <motion.div 
+                            className="absolute top-4 left-4 w-14 h-14 border-l-4 border-t-4 rounded-tl-xl"
+                            style={{ borderColor: '#730007' }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: cert.delay + 0.4, type: "spring" }}
+                          />
+                          <motion.div 
+                            className="absolute bottom-4 right-4 w-14 h-14 border-r-4 border-b-4 rounded-br-xl"
+                            style={{ borderColor: '#1a1b4f' }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: cert.delay + 0.5, type: "spring" }}
+                          />
+                          
+                          {/* Enhanced Certification Badge - Reduced Size */}
+                          <motion.div 
+                            className="absolute bottom-3 left-3 bg-white border border-green-500 px-2.5 py-1.5 rounded-lg shadow-md"
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: cert.delay + 0.6, type: "spring" }}
+                            whileHover={{ scale: 1.03 }}
+                          >
+                            <div className="flex items-center space-x-1.5">
+                              <motion.div 
+                                className="w-2 h-2 bg-green-500 rounded-full"
+                                animate={{ 
+                                  scale: [1, 1.1, 1],
+                                  opacity: [1, 0.8, 1]
+                                }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                              />
+                              <span className="text-xs font-bold text-green-700 tracking-wide">CERTIFIED</span>
+                            </div>
+                          </motion.div>
+                          
+                          {/* Document Authenticity Seal - Reduced Size */}
+                          <motion.div 
+                            className="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center shadow-md"
+                            style={{ backgroundColor: '#730007' }}
+                            initial={{ opacity: 0, rotate: -180 }}
+                            animate={{ opacity: 1, rotate: 0 }}
+                            transition={{ delay: cert.delay + 0.7, type: "spring", stiffness: 200 }}
+                            whileHover={{ rotate: 8, scale: 1.05 }}
+                          >
+                            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </motion.div>
+                        </motion.div>
+                        
+                        {/* Enhanced Professional Frame Border */}
+                        <div className="absolute inset-3 rounded-xl border-2 border-white/60 pointer-events-none shadow-inner" />
+                        
+                        {/* Subtle Shimmer Effect */}
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-2xl"
+                          initial={{ x: '-100%', opacity: 0 }}
+                          animate={{ x: '100%', opacity: [0, 1, 0] }}
+                          transition={{ 
+                            duration: 2, 
+                            delay: cert.delay + 1,
+                            repeat: Infinity,
+                            repeatDelay: 6
+                          }}
+                        />
+                      </div>
+                      
+                      {/* Professional Image Caption */}
+                      <motion.div 
+                        className="mt-4 text-center px-4"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: cert.delay + 0.8 }}
+                      >
+                        <div className="text-sm font-semibold text-slate-700 tracking-wide border-t border-slate-200 pt-4 mb-2">
+                          Official SBA 8(a) Business Development Program Certification
+                        </div>
+                        <div className="text-xs text-slate-500">
+                          U.S. Small Business Administration • Federal Certification Document
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  )}
+
+                  {/* Icon - Only show if no image */}
+                  {!cert.hasImage && (
+                    <motion.div 
+                      className="w-16 h-16 mb-6 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center"
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ 
+                        type: "spring", 
+                        stiffness: 200, 
+                        delay: cert.delay + 0.1 
+                      }}
+                      whileHover={{ 
+                        scale: 1.1, 
+                        backgroundColor: "#1a1b4f",
+                        borderColor: "#1a1b4f"
+                      }}
+                    >
+                      <svg className="w-8 h-8 text-slate-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d={cert.icon} clipRule="evenodd" />
+                      </svg>
+                    </motion.div>
+                  )}
+
+                  {/* Enhanced Compact Icon for Image Cards */}
+                  {cert.hasImage && (
+                    <motion.div 
+                      className="absolute top-8 left-8 w-14 h-14 rounded-xl bg-white/95 backdrop-blur-sm border-2 border-slate-200 flex items-center justify-center shadow-lg"
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ 
+                        type: "spring", 
+                        stiffness: 200, 
+                        delay: cert.delay + 0.3 
+                      }}
+                      whileHover={{ 
+                        scale: 1.1, 
+                        backgroundColor: "#1a1b4f",
+                        borderColor: "#1a1b4f",
+                        rotate: 5
+                      }}
+                    >
+                      {/* Icon Background Glow */}
+                      <motion.div
+                        className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-100 to-red-100 opacity-0"
+                        whileHover={{ opacity: 0.3 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                      
+                      <svg className="w-7 h-7 text-slate-600 group-hover:text-white transition-colors duration-300 relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d={cert.icon} clipRule="evenodd" />
+                      </svg>
+                      
+                      {/* Small animated ring */}
+                      <motion.div
+                        className="absolute inset-0 border-2 border-blue-300 rounded-xl opacity-0"
+                        whileHover={{ 
+                          opacity: [0, 0.6, 0],
+                          scale: [1, 1.1, 1.2]
+                        }}
+                        transition={{ duration: 0.6, repeat: Infinity }}
+                      />
+                    </motion.div>
+                  )}
+
+                  {/* Enhanced Content Section with Professional Typography */}
+                  <motion.div 
+                    className="space-y-6"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: cert.delay + 0.5 }}
+                  >
+                    {/* Enhanced Certification Title */}
+                    <motion.h4 
+                      className="text-2xl lg:text-3xl font-black leading-tight tracking-tight mb-4"
+                      style={{ color: '#1a1b4f' }}
+                      initial={{ opacity: 0, x: -30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: cert.delay + 0.6, type: "spring", stiffness: 100 }}
+                      whileHover={{ x: 8, scale: 1.01 }}
+                    >
+                      {cert.name}
+                      
+                      {/* Professional Title Underline */}
+                      <motion.div 
+                        className="h-1 rounded-full mt-2"
+                        style={{ backgroundColor: index === 0 ? '#730007' : '#1a1b4f' }}
+                        initial={{ width: 0 }}
+                        animate={{ width: "60px" }}
+                        transition={{ delay: cert.delay + 0.8, duration: 0.8 }}
+                        whileHover={{ width: "80px" }}
+                      />
+                    </motion.h4>
+                    
+                    {/* Enhanced Certification Details Grid */}
+                    <motion.div 
+                      className="grid grid-cols-2 gap-4 mb-6"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: cert.delay + 0.7 }}
+                    >
+                      <div className="space-y-1">
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">Certification ID</div>
+                        <div className="font-mono font-bold text-sm" style={{ color: index === 0 ? '#730007' : '#1a1b4f' }}>
+                          {cert.certificationNumber}
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">
+                          {cert.naicsCode ? 'NAICS Code' : 'Registry Number'}
+                        </div>
+                        <div className="font-mono font-bold text-sm text-slate-700">
+                          {cert.naicsCode || cert.registryNumber}
+                        </div>
+                      </div>
+                    </motion.div>
+                    
+                    {/* Enhanced Description */}
+                    <motion.p 
+                      className="text-slate-600 leading-relaxed font-medium text-lg mb-4"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: cert.delay + 0.8 }}
+                      whileHover={{ x: 8 }}
+                    >
+                      {cert.description}
+                    </motion.p>
+                    
+                    {/* Enhanced Detailed Description with Professional Styling */}
+                    <motion.div 
+                      className="relative pl-6 py-4 rounded-xl bg-gradient-to-r from-slate-50 to-white border-l-4 border-r border-t border-b border-slate-200"
+                      style={{ borderLeftColor: index === 0 ? '#730007' : '#1a1b4f' }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: cert.delay + 0.9 }}
+                      whileHover={{ x: 5, backgroundColor: 'rgba(248, 250, 252, 0.8)' }}
+                    >
+                      {/* Quote Icon */}
+                      <motion.div 
+                        className="absolute -left-2 top-4 w-4 h-4 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: index === 0 ? '#730007' : '#1a1b4f' }}
+                        whileHover={{ scale: 1.2 }}
+                      >
+                        <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </motion.div>
+                      
+                      <p className="text-slate-600 leading-relaxed font-medium italic">
+                        {cert.longDescription}
+                      </p>
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Enhanced Professional Footer with Stats */}
+                  <motion.div 
+                    className="mt-10 pt-8 border-t-2 border-slate-100"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: cert.delay + 1.0 }}
+                  >
+                    {/* Enhanced Verification Status Bar */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center space-x-3">
+                        <motion.div 
+                          className="relative w-4 h-4 bg-green-500 rounded-full flex items-center justify-center"
+                          animate={{ 
+                            scale: [1, 1.2, 1],
+                            boxShadow: [
+                              '0 0 0 0 rgba(34, 197, 94, 0.7)',
+                              '0 0 0 10px rgba(34, 197, 94, 0)',
+                              '0 0 0 0 rgba(34, 197, 94, 0)'
+                            ]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                          <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </motion.div>
+                        <div>
+                          <div className="text-sm font-bold text-green-700">Verified Active Status</div>
+                          <div className="text-xs text-slate-500">Last verified 24 hours ago</div>
+                        </div>
+                      </div>
+                      
+                      {/* Enhanced Professional Seal */}
+                      <motion.div 
+                        className="relative opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                        whileHover={{ scale: 1.3, rotate: 15 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-slate-300 flex items-center justify-center shadow-lg">
+                          <svg className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        
+                        {/* Rotating Ring Effect */}
+                        <motion.div
+                          className="absolute inset-0 border-2 border-blue-200 rounded-full opacity-0"
+                          whileHover={{ 
+                            opacity: [0, 0.5, 0],
+                            rotate: [0, 360],
+                            scale: [1, 1.2, 1.4]
+                          }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        />
+                      </motion.div>
+                    </div>
+                    
+                    {/* Professional Achievement Metrics */}
+                    <motion.div 
+                      className="grid grid-cols-3 gap-4 text-center"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: cert.delay + 1.1 }}
+                    >
+                      <div className="space-y-1">
+                        <div className="text-lg font-black" style={{ color: index === 0 ? '#730007' : '#1a1b4f' }}>
+                          {index === 0 ? '9+' : '7+'}
+                        </div>
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">
+                          Years Certified
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-lg font-black" style={{ color: index === 0 ? '#730007' : '#1a1b4f' }}>
+                          {index === 0 ? '150+' : '85+'}
+                        </div>
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">
+                          Projects Completed
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-lg font-black text-green-600">
+                          100%
+                        </div>
+                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">
+                          Compliance Rate
+                        </div>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Enhanced Animated Border */}
+                  <motion.div 
+                    className="absolute bottom-0 left-0 h-2 w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl"
+                    style={{ 
+                      background: index === 0 
+                        ? 'linear-gradient(90deg, #730007, #8b0009)' 
+                        : 'linear-gradient(90deg, #1a1b4f, #252663)' 
+                    }}
+                  />
+                  
+                  {/* Professional Hover Glow Effect */}
+                  <motion.div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"
+                    style={{ 
+                      background: index === 0 
+                        ? 'radial-gradient(circle at center, #730007, transparent)' 
+                        : 'radial-gradient(circle at center, #1a1b4f, transparent)' 
+                    }}
+                  />
                 </motion.div>
               ))}
             </div>

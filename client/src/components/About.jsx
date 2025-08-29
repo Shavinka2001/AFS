@@ -177,7 +177,7 @@ const About = () => {
                         </svg>
                       </div>
                       <div>
-                        <div className="text-sm font-bold" style={{ color: '#1a1b4f' }}>ISO Certified</div>
+                        <div className="text-sm font-bold" style={{ color: '#1a1b4f' }}>8(a) SBA Certified</div>
                         <div className="text-xs text-gray-600">Quality Assured</div>
                       </div>
                     </div>
