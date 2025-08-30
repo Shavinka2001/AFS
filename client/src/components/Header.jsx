@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex items-center space-x-4 group cursor-pointer">
             <div className="relative">
               <img 
-                src="/src/assets/logo.jpg" 
+                src="/logo.jpg" 
                 alt="AFS Logo" 
                 className={`rounded-md shadow-sm border border-gray-200 object-contain bg-white transition-all duration-300 ${
                   isScrolled ? 'h-10' : 'h-12'

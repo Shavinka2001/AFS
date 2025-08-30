@@ -1251,7 +1251,7 @@ const Hero = () => {
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
                   delay: 3.0,
                   badge: "Federal Certification",
-                  image: "/src/assets/image003.jpg",
+                  image: "/image003.jpg",
                   hasImage: true,
                   certificationNumber: "SBA-8A-2024-FM",
                   issuedBy: "U.S. Small Business Administration",

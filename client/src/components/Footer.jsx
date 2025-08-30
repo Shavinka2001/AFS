@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row sm:items-center lg:flex-col lg:items-start group-hover:animate-pulse">
               <div className="relative mb-4 sm:mb-0 sm:mr-4 lg:mb-4 lg:mr-0">
                 <img 
-                  src="/src/assets/logo.jpg" 
+                  src="/logo.jpg" 
                   alt="AFS Logo" 
                   className="h-16 sm:h-12 lg:h-12 w-auto rounded-lg shadow-lg border-2 border-white/20 hover:border-white/40 transition-all duration-300"
                 />
